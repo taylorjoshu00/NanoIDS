@@ -1,0 +1,16 @@
+## Add secondary disk for log files
+# WIPE THE PARTITION
+gpart destroy -F ada0
+# CREATE GPT style SLICE (partition)
+gpart create -s gpt ada0
+# CREATE FFS SLICE (filling entire platter)
+gpart add -t freebsd-ufs ada0
+# FORMAT THE NEW FFS SLICE
+newfs -U /dev/ada0p1
+# mount the disk to the /data dir
+mount /dev/ada0p1 /data
+# CREATE ENTRY IN FSTAB
+echo "/dev/ada0p1	/data	ufs	rw	2	2" >> /etc/fstab
+mount /cfg
+cp /etc/fstab /cfg
+umount /cfg

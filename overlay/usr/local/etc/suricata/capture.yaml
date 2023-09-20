@@ -1,0 +1,11 @@
+%YAML 1.1
+---
+##
+## Step 3: Configure common capture settings
+##
+## See "Advanced Capture Options" below for more options, including Netmap
+## and PF_RING.
+##
+netmap:
+  - interface: re1
+    threads: 4
