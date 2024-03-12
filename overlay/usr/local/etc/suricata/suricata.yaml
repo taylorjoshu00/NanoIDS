@@ -1,0 +1,44 @@
+%YAML 1.1
+---
+suricata-version: ""
+
+include: network.yaml
+include: outputs.yaml
+include: capture.yaml
+include: app_protocol.yaml
+include: advanced.yaml
+
+
+default-rule-path: /data/rules
+rule-files:
+  - suricata.rules
+  - custom.rules
+  - botcc.rules
+  - ciarmy.rules
+  - drop.rules
+  - emerging-activex.rules
+  - emerging-adware_pup.rules
+  - emerging-attack_response.rules
+  - emerging-chat.rules
+  - emerging-coinminer.rules
+  - emerging-current_events.rules
+  - emerging-deleted.rules
+  - emerging-exploit.rules
+  - emerging-exploit_kit.rules
+  - emerging-icmp.rules
+  - emerging-ja3.rules
+  - emerging-malware.rules
+  - emerging-mobile_malware.rules
+  - emerging-phishing.rules
+  - emerging-scan.rules
+  - emerging-shellcode.rules
+  - emerging-sql.rules
+  - emerging-telnet.rules
+  - emerging-user_agents.rules
+  - emerging-voip.rules
+  - emerging-worm.rules
+  - threatview_CS_c2.rules
+
+classification-file: /usr/local/etc/suricata/classification.config
+reference-config-file: /usr/local/etc/suricata/reference.config
+# threshold-file: /usr/local/etc/suricata/threshold.config

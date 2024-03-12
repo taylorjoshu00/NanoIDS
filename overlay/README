@@ -1,0 +1,42 @@
+## Add secondary disk for log files
+# WIPE THE PARTITION
+gpart destroy -F ada0
+# CREATE GPT style SLICE (partition)
+gpart create -s gpt ada0
+# CREATE FFS SLICE (filling entire platter)
+gpart add -t freebsd-ufs ada0
+# FORMAT THE NEW FFS SLICE
+newfs -U /dev/ada0p1
+# mount the disk to the /data dir
+mount /dev/ada0p1 /data
+# CREATE ENTRY IN FSTAB
+echo "/dev/ada0p1	/data	ufs	rw	2	2" >> /etc/fstab
+mount /cfg
+cp /etc/fstab /cfg
+umount /cfg
+# Installed Packages
+beats8-8.8.2_3.pkg
+gettext-runtime-0.22.3.pkg
+indexinfo-0.3.1.pkg
+jansson-2.14.pkg
+jq-1.7_2.pkg
+libffi-3.4.4.pkg
+libiconv-1.17.pkg
+libidn2-2.3.4.pkg
+liblz4-1.9.4,1.pkg
+libnet-1.3,1.pkg
+libunistring-1.1.pkg
+libyaml-0.2.5.pkg
+mpdecimal-2.5.1.pkg
+nano-7.2.pkg
+oinkmaster-2.0_1.pkg
+oniguruma-6.9.9.pkg
+pcre2-10.42.pkg
+perl5-5.36.3_1.pkg
+pkg-1.20.9.pkg
+py39-setuptools-63.1.0_1.pkg
+py39-yaml-6.0.1.pkg
+python39-3.9.18.pkg
+readline-8.2.7.pkg
+suricata-7.0.3.pkg
+wget-1.21.4.pkg

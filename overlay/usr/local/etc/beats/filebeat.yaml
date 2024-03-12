@@ -1,0 +1,4 @@
+- module: suricata
+  eve:
+    enabled: true
+    var.paths: ["/data/dhcp/dhcp*.json", "/data/tls/tls*.json", "/data/http/http*.json", "/data/smtp/smtp*.json", "/data/alerts/alerts*.json", "/data/sip/sip*.json]
