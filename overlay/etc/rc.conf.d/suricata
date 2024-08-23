@@ -1,0 +1,9 @@
+# SURICATA drop-in rc.conf file
+#suricata_enable="YES"
+#suricata_conf="/data/config/suricata.yaml"
+#suricata_flags="-D -F /data/config/bpf.filter"
+#suricata_divertport="8000"
+#suricata_netmap="YES"
+#suricata_user="root"
+#suricata_pidfile="/var/run/suricata.pid"
+

@@ -7,6 +7,6 @@
                                              
                                              
 Intrusion Detection on embedded devices
-Suricata version: 7.0.3
-Freebsd version: 13.2-RELEASE-p3
+Suricata version: 7.0.6
+Freebsd version: 13.3
 Please see the README in the root directory
