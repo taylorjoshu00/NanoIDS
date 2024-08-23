@@ -1,1 +1,2 @@
+# enable SSH Server
 sshd_enable="YES"

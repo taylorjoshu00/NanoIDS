@@ -2,17 +2,18 @@
 ---
 suricata-version: ""
 
-include: network.yaml
-include: outputs.yaml
-include: capture.yaml
-include: app_protocol.yaml
-include: advanced.yaml
+include:
+  - network.yaml
+  - outputs.yaml
+  - capture.yaml
+  - app_protocol.yaml
+  - advanced.yaml
 
 
 default-rule-path: /data/rules
 rule-files:
   - suricata.rules
-  - custom.rules
+  - winnti.rules
   - botcc.rules
   - ciarmy.rules
   - drop.rules
@@ -32,6 +33,7 @@ rule-files:
   - emerging-phishing.rules
   - emerging-scan.rules
   - emerging-shellcode.rules
+  - emerging-snmp.rules
   - emerging-sql.rules
   - emerging-telnet.rules
   - emerging-user_agents.rules
@@ -41,4 +43,4 @@ rule-files:
 
 classification-file: /usr/local/etc/suricata/classification.config
 reference-config-file: /usr/local/etc/suricata/reference.config
-# threshold-file: /usr/local/etc/suricata/threshold.config
+threshold-file: /usr/local/etc/suricata/threshold.config

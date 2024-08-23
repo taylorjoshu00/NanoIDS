@@ -25,7 +25,7 @@
 security:
   lua:
     # Allow Lua rules. Disabled by default.
-    #allow-rules: false
+    allow-rules: true 
 
 # Some logging modules will use that name in event as identifier. The default
 # value is the hostname
@@ -34,7 +34,7 @@ security:
 # Default location of the pid file. The pid file is only used in
 # daemon mode (start Suricata with -D). If not running in daemon mode
 # the --pidfile command line option must be used to create a pid file.
-#pid-file: /var/run/suricata.pid
+pid-file: /var/run/suricata.pid
 
 # Daemon working directory
 # Suricata will change directory to this one if provided
@@ -158,10 +158,10 @@ pcre:
 host-os-policy:
   # Make the default policy windows.
   windows: [0.0.0.0/0]
-  bsd: []
+  bsd: [10.0.0.1, 10.0.10.1, 10.0.90.1]
   bsd-right: []
   old-linux: []
-  linux: []
+  linux: [10.0.0.66]
   old-solaris: []
   solaris: []
   hpux10: []

@@ -1,4 +1,4 @@
-# SURICATA drop-in rc.conf file
+# SURICATA drop-in rc.conf file, modify as required once settings are changed
 #suricata_enable="YES"
 #suricata_conf="/data/config/suricata.yaml"
 #suricata_flags="-D -F /data/config/bpf.filter"

@@ -1,3 +1,4 @@
+# Network config
 ifconfig_re0="DHCP"
 ifconfig_re1="up"
 ifconfig_re2="up"
