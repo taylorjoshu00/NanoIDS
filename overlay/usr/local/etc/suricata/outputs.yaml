@@ -142,6 +142,12 @@ outputs:
       community-id-seed: 0
       types:
         - dns:
+            #version: 2
+            #enabled: yes
+            #requests: no
+            #responses: no
+            #formats: [detailed, grouped]
+            #types: [a, aaaa, cname, mx, ns, ptr, txt]
 
   - eve-log:
       enabled: no
@@ -164,14 +170,6 @@ outputs:
               # stream: no
               # applayer: yes
             #packethdr: no
-
-        - dns:
-            #version: 2
-            enabled: yes
-            #requests: no
-            #responses: no
-            #formats: [detailed, grouped]
-            #types: [a, aaaa, cname, mx, ns, ptr, txt]
 
         - files:
             force-magic: no
