@@ -23,6 +23,7 @@ jobs:
       uses: truemark/aws-ec2-run-instance-action@v5
       with:
         image-id: ami-0cc1bbfc81dd6bc6d # FreeBSD AMI ID
+        region: us-east-1
         instance-type: t2.micro
         security-group-id: sg-0a1234567890abcdef
         subnet-id: subnet-0a1234567890abcdef
