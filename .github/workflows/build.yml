@@ -26,7 +26,7 @@ jobs:
         region: eu-west-2a
         instance-type: t2.micro
         security-group-id: sg-04d6e6013db1e2981
-        subnet-id: eipalloc-06df492adfe36f7ec
+        subnet-id: subnet-0b75b6d6e9b59a5bd
         instance-shutdown-behavior: terminate
         user-data: |
           #!/bin/sh
