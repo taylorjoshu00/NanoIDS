@@ -22,11 +22,11 @@ jobs:
       id: ec2
       uses: truemark/aws-ec2-run-instance-action@v5
       with:
-        image-id: "ami-0cc1bbfc81dd6bc6d"
-        region: "eu-west-2a"
-        instance-type: "t2.micro"
-        security-group-id: "sg-04d6e6013db1e2981"
-        subnet-id: "subnet-0b75b6d6e9b59a5bd"
+        image-id: ami-0cc1bbfc81dd6bc6d
+        region: eu-west-2
+        instance-type: t2.micro
+        security-group-id: sg-04d6e6013db1e2981
+        subnet-id: subnet-0b75b6d6e9b59a5bd
         instance-shutdown-behavior: terminate
         user-data: |
           #!/bin/sh
