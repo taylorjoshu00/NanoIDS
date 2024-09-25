@@ -16,17 +16,17 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
+        aws-region: eu-west-2a
 
     - name: Launch EC2 instance
       id: ec2
       uses: truemark/aws-ec2-run-instance-action@v5
       with:
-        image-id: ami-0cc1bbfc81dd6bc6d # FreeBSD AMI ID
-        region: eu-west-2a
-        instance-type: t2.micro
-        security-group-id: sg-04d6e6013db1e2981
-        subnet-id: subnet-0b75b6d6e9b59a5bd
+        image-id: "ami-0cc1bbfc81dd6bc6d"
+        region: "eu-west-2a"
+        instance-type: "t2.micro"
+        security-group-id: "sg-04d6e6013db1e2981"
+        subnet-id: "subnet-0b75b6d6e9b59a5bd"
         instance-shutdown-behavior: terminate
         user-data: |
           #!/bin/sh
